@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Academia - eLearning Platform</title>
+
+<style>
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:#eef2f7;
+  color:#1f2937;
+}
+
+/* NAVBAR */
+header{
+  background:#0f172a;
+  color:white;
+  padding:18px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 14px;
+  font-weight:bold;
+  padding:8px 12px;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  background:#38bdf8;
+  color:#000;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#1d4ed8,#22c55e);
+  color:white;
+  text-align:center;
+  padding:140px 20px;
+}
+
+.hero h1{
+  font-size:60px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:20px;
+  opacity:0.9;
+  margin-bottom:25px;
+}
+
+.hero button{
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  background:#000;
+  color:#fff;
+  cursor:pointer;
+  font-size:16px;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* SECTION */
+section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+h2{
+  font-size:34px;
+  margin-bottom:15px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+/* CARD */
+.card{
+  background:white;
+  padding:35px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.card:hover{
+  transform:translateY(-12px);
+  background:#e0f2fe;
+}
+
+/* PRICE */
+.price{
+  background:white;
+  padding:40px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.price:hover{
+  transform:scale(1.07);
+  background:#dcfce7;
+}
+
+/* FOOTER */
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:25px;
+  margin-top:50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <h2>📘 Academia</h2>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+
+  <div class="hero">
+    <h1>Learn Anytime, Anywhere</h1>
+    <p>Build skills with modern online courses</p>
+    <button>Get Started</button>
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Academia</h2>
+  <p style="max-width:800px;margin:auto;font-size:18px;line-height:1.7;">
+    Academia is a modern eLearning platform designed for students, developers, and professionals.
+    We provide structured courses in web development, design, programming and real-world projects.
+  </p>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+  <h2>Our Courses</h2>
+
+  <div class="grid">
+    <div class="card">HTML Mastery</div>
+    <div class="card">CSS Advanced Styling</div>
+    <div class="card">JavaScript Development</div>
+    <div class="card">UI/UX Design</div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <h2>Pricing Plans</h2>
+
+  <div class="grid">
+
+    <div class="price">
+      <h3>Basic</h3>
+      <p>$19 / year</p>
+    </div>
+
+    <div class="price">
+      <h3>Pro</h3>
+      <p>$129 / year</p>
+    </div>
+
+    <div class="price">
+      <h3>Lifetime</h3>
+      <p>$349 / life</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: academia@gmail.com</p>
+  <p>Phone: +91 98765 43210</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Academia | Designed with HTML & CSS</p>
+</footer>
+
+</body>
+</html>

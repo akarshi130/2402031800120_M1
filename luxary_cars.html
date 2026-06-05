@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VelocityX Luxury Cars</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#080808;
+color:white;
+overflow-x:hidden;
+}
+/* NAVBAR */
+nav{
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+top:0;
+z-index:1000;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+}
+
+.logo{
+font-size:34px;
+font-weight:800;
+color:#ff2e63;
+letter-spacing:2px;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:17px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#ff2e63;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+background-attachment:fixed;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:85px;
+font-weight:800;
+margin-bottom:20px;
+text-transform:uppercase;
+letter-spacing:3px;
+}
+
+.hero-content p{
+font-size:24px;
+color:#ddd;
+margin-bottom:30px;
+}
+
+.hero-content button{
+padding:15px 38px;
+border:none;
+background:#ff2e63;
+color:white;
+font-size:18px;
+border-radius:40px;
+cursor:pointer;
+transition:0.4s;
+font-weight:bold;
+}
+
+.hero-content button:hover{
+background:white;
+color:#ff2e63;
+transform:scale(1.08);
+}
+
+/* SECTION TITLE */
+
+.section-title{
+text-align:center;
+font-size:52px;
+margin-bottom:60px;
+font-weight:800;
+color:#ff2e63;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+
+/* CARS SECTION */
+
+.cars{
+padding:110px 8%;
+}
+
+.car-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+/* CARD */
+
+.car-card{
+background:#111;
+border-radius:22px;
+overflow:hidden;
+transition:0.4s;
+box-shadow:0 0 10px rgba(255,255,255,0.05);
+}
+
+.car-card:hover{
+transform:translateY(-12px);
+box-shadow:0 0 25px rgba(255,46,99,0.5);
+}
+
+.car-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.car-card:hover img{
+transform:scale(1.05);
+}
+
+.card-content{
+padding:24px;
+}
+
+.card-content h3{
+font-size:30px;
+margin-bottom:18px;
+color:#ff2e63;
+}
+
+.card-content p{
+font-size:16px;
+line-height:2;
+color:#ddd;
+margin-bottom:20px;
+}
+
+.card-content button{
+padding:12px 24px;
+border:none;
+background:#ff2e63;
+color:white;
+font-size:15px;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+font-weight:600;
+}
+
+.card-content button:hover{
+background:white;
+color:#ff2e63;
+}
+
+/* SUPERCARS SECTION */
+
+.supercars{
+padding:50px 8% 120px;
+}
+
+/* ABOUT */
+
+.about{
+padding:110px 8%;
+text-align:center;
+background:#0f0f0f;
+}
+
+.about h2{
+font-size:52px;
+margin-bottom:25px;
+color:#ff2e63;
+}
+
+.about p{
+max-width:950px;
+margin:auto;
+font-size:19px;
+line-height:2;
+color:#ccc;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+padding:25px;
+text-align:center;
+color:#999;
+font-size:16px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.hero-content h1{
+font-size:50px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+.section-title{
+font-size:36px;
+}
+
+.card-content h3{
+font-size:25px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">VelocityX</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#cars">Luxury Cars</a></li>
+<li><a href="#supercars">Supercars</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>Drive The Future</h1>
+
+<p>Luxury • Speed • Power • Performance</p>
+
+<button onclick="scrollToCars()">Explore Collection</button>
+
+</div>
+
+</section>
+
+<!-- LUXURY CARS SECTION -->
+
+<section class="cars" id="cars">
+
+<h2 class="section-title">Luxury Cars Collection</h2>
+
+<div class="car-container">
+
+<!-- Bentley -->
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Bentley Continental GT</h3>
+
+<p>
+Top Speed: 333 km/h <br>
+Horsepower: 650 HP <br>
+Engine: 6.0L W12 Twin Turbo <br>
+Price: $250,000 <br>
+0-100 km/h: 3.5 sec <br>
+Country: United Kingdom
+</p>
+
+<button>View More</button>
+</div>
+</div>
+
+<!-- Mercedes -->
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Mercedes Benz G-Class</h3>
+
+<p>
+Top Speed: 240 km/h <br>
+Horsepower: 577 HP <br>
+Engine: 4.0L V8 Biturbo <br>
+Price: $180,000 <br>
+0-100 km/h: 4.5 sec <br>
+Country: Germany
+</p>
+
+<button>View More</button>
+</div>
+</div>
+
+<!-- BMW -->
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>BMW M5 Competition</h3>
+
+<p>
+Top Speed: 305 km/h <br>
+Horsepower: 617 HP <br>
+Engine: 4.4L Twin Turbo V8 <br>
+Price: $120,000 <br>
+0-100 km/h: 3.2 sec <br>
+Country: Germany
+</p>
+
+<button>View More</button>
+</div>
+</div>
+
+<!-- Audi -->
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Audi R8</h3>
+
+<p>
+Top Speed: 331 km/h <br>
+Horsepower: 602 HP <br>
+Engine: 5.2L V10 <br>
+Price: $170,000 <br>
+0-100 km/h: 3.1 sec <br>
+Country: Germany
+</p>
+
+<button>View More</button>
+</div>
+</div>
+
+<!-- Lamborghini -->
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Lamborghini Aventador</h3>
+
+<p>
+Top Speed: 350 km/h <br>
+Horsepower: 769 HP <br>
+Engine: 6.5L V12 <br>
+Price: $500,000 <br>
+0-100 km/h: 2.8 sec <br>
+Country: Italy
+</p>
+
+<button>View More</button>
+</div>
+</div>
+
+<!-- Ferrari -->
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Ferrari LaFerrari</h3>
+
+<p>
+Top Speed: 352 km/h <br>
+Horsepower: 950 HP <br>
+Engine: 6.3L V12 Hybrid <br>
+Price: $1.5 Million <br>
+0-100 km/h: 2.6 sec <br>
+Country: Italy
+</p>
+
+<button>View More</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- SUPERCARS SECTION -->
+
+<section class="supercars" id="supercars">
+
+<h2 class="section-title">Supercars Collection</h2>
+
+<div class="car-container">
+
+<!-- Bugatti -->
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Bugatti Chiron</h3>
+
+<p>
+Top Speed: 420 km/h <br>
+Horsepower: 1500 HP <br>
+Engine: 8.0L Quad Turbo W16 <br>
+Price: $3 Million <br>
+0-100 km/h: 2.4 sec <br>
+Country: France
+</p>
+
+<button>View More</button>
+</div>
+</div>
+
+<!-- McLaren -->
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>McLaren 720S</h3>
+
+<p>
+Top Speed: 341 km/h <br>
+Horsepower: 710 HP <br>
+Engine: 4.0L Twin Turbo V8 <br>
+Price: $310,000 <br>
+0-100 km/h: 2.8 sec <br>
+Country: United Kingdom
+</p>
+
+<button>View More</button>
+</div>
+</div>
+
+<!-- Porsche -->
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Porsche 911 Turbo S</h3>
+
+<p>
+Top Speed: 330 km/h <br>
+Horsepower: 640 HP <br>
+Engine: 3.8L Twin Turbo Flat-6 <br>
+Price: $200,000 <br>
+0-100 km/h: 2.7 sec <br>
+Country: Germany
+</p>
+
+<button>View More</button>
+</div>
+</div>
+
+<!-- Aston Martin -->
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400&auto=format&fit=crop" alt="Aston Martin DB11">
+<div class="card-content">
+<h3>Aston Martin DB11</h3>
+
+<p>
+Top Speed: 322 km/h <br>
+Horsepower: 630 HP <br>
+Engine: 5.2L Twin Turbo V12 <br>
+Price: $220,000 <br>
+0-100 km/h: 3.7 sec <br>
+Country: United Kingdom
+</p>
+
+<button>View More</button>
+</div>
+</div>
+
+<!-- Tesla -->
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Tesla Model S Plaid</h3>
+
+<p>
+Top Speed: 322 km/h <br>
+Horsepower: 1020 HP <br>
+Engine: Electric Tri Motor <br>
+Price: $110,000 <br>
+0-100 km/h: 1.99 sec <br>
+Country: USA
+</p>
+
+<button>View More</button>
+</div>
+</div>
+
+<!-- Lexus -->
+
+<div class="car-card">
+<img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=1200&auto=format&fit=crop" alt="Lexus LFA">
+<div class="card-content">
+<h3>Lexus LFA</h3>
+
+<p>
+Top Speed: 325 km/h <br>
+Horsepower: 553 HP <br>
+Engine: 4.8L V10 <br>
+Price: $375,000 <br>
+0-100 km/h: 3.6 sec <br>
+Country: Japan
+</p>
+
+<button>View More</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<h2>About VelocityX</h2>
+
+<p>
+<!-- ABOUT US -->
+
+<section class="about" id="aboutus">
+
+<h2>About Us</h2>
+
+<p>
+
+Welcome to VelocityX — a premium luxury and supercar showcase website
+created for car enthusiasts who love speed, performance, innovation,
+and luxury automobiles.
+
+Our mission is to present the world's most famous luxury cars and
+hypercars in a modern and attractive way. From Lamborghini and Ferrari
+to Bugatti, McLaren, Rolls Royce, Bentley, Porsche, and many more,
+VelocityX provides detailed information and stunning visuals of
+high-performance vehicles.
+
+This website is designed using HTML, CSS, and JavaScript with modern UI,
+responsive layouts, smooth scrolling effects, and interactive design
+to provide the best viewing experience for users.
+
+</p>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="about" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>
+
+📍 Location: Ahmedabad, Gujarat, India <br><br>
+
+📧 Email: velocityxcars@gmail.com <br><br>
+
+📱 Phone: +91 98765 43210 <br><br>
+
+🌐 Website: www.velocityx.com <br><br>
+
+Thank you for visiting VelocityX.
+For any queries, suggestions, or collaborations,
+feel free to contact us anytime.
+
+</p>
+
+</section>
+
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 VelocityX | Luxury & Supercars Showcase Website</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function scrollToCars(){
+
+document.getElementById("cars").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>

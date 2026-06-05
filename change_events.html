@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Bill</title>
+    </head>
+    <body>
+        Select product:
+        <select id="product" onchange="getPrice()">
+            <option value="45000">AC</option>
+            <option value="22000">TV</option>
+            <option value="15000">Refrigerator</option>
+            <option value="70000">Laptop</option>
+            <br><br>
+            Net price:  <input type="text" id="prize"> <br><br>
+            Quantity: <input type="text" id="Quantity"><br><br>
+            Total Amount: <input type="text" id="amount">
+            <body>
+                <script>
+                    
+
+var product = document.getElementById("product");
+
+var qunatity = document.getElementById("quantity");
+
+var amount = document.getElementById("amount");
+
+var prize = document.getElementById("prize");
+
+product.addEventListener("change",()=>{
+
+prize.value = product.value;
+
+});
+
+amount.addEventListener("focus",()=>{
+
+amount.value=product.value * qunatity.value;
+
+});
+
+</script>
+                
+            
+    </body>
+</html>

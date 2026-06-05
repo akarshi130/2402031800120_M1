@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple HTML Page</title>
+</head>
+<body>
+
+    <h1>Sample Page</h1>
+
+    <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p id="p2">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p id="p3">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+    <p id="p4">Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+    <p id="p5">Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+
+    <input type="text" id="myInput" placeholder="Enter text">
+    <button type="button" id="btn">Submit</button>
+    <p id="msg"></p>
+
+    <p id="newPara">This is new paragraph</p>
+    <button id="showBtn">Show</button>
+    <button id="hideBtn">Hide</button>
+    <button id="toggleBtn">Toggle</button>
+    <button id="fadeInBtn">FadeIn</button>
+    <button id="fadeOutBtn">FadeOut</button>
+
+    <h2>FAQ</h2>
+
+    <button id="faqBtn">+</button>
+
+    <div id="faqBox" style="display:none; margin-top:10px;">
+
+        <div class="faq-item">
+            <p><b>1. What is jQuery?</b></p>
+            <p>jQuery is a JavaScript library that simplifies coding.</p>
+        </div>
+
+        <div class="faq-item">
+            <p><b>2. Why use jQuery?</b></p>
+            <p>It makes DOM manipulation and events easier.</p>
+        </div>
+
+        <div class="faq-item">
+            <p><b>3. Is jQuery still used?</b></p>
+            <p>Yes, but modern frameworks are also popular.</p>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+  ></script>
+
+  <script>
+
+        $("#btn").click(function(){
+            var xyz=$("#myInput").val();
+            $("#msg").text(xyz);
+            $("#msg").html("<b>Your input is: </b>" + xyz );
+        });
+        $("#p1").css("color","red");
+        $("#p1").css({
+            color:"blue",
+            background:"lightgray"
+        });
+        // $("#p2").hide();
+        // $("#p2").show();
+
+        $("#showBtn").click(function(){
+            $("#newPara").show();
+        });
+
+        $("#hideBtn").click(function(){
+            $("#newPara").hide();
+        });
+
+        $("#toggleBtn").click(function(){
+            $("#newPara").toggle();
+        });
+
+        $("#fadeInBtn").click(function(){
+            $("#newPara").fadeIn("1000");
+        });
+
+        $("#fadeOutBtn").click(function(){
+            $("#newPara").fadeOut("1000");
+        });
+
+        $("#faqBtn").click(function () {
+
+        $("#faqBox").slideToggle(300);
+
+        
+        if ($(this).text() === "+") {
+            $(this).text("-");
+        } else {
+            $(this).text("+");
+        }
+
+});
+
+        // $(document).ready(function(){
+        //     alert("Page loaded.");
+        // })
+        // $("p:first").click(function(){
+        //     alert("First paragraph clicked.");
+        // })
+  </script>
+
+</body>
+</html>

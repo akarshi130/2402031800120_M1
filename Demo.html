@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Page</title>
+</head>
+<body>
+
+    <h2>Demo Page</h2>
+
+    <p id="p1">This is paragraph one. Lorem ipsum dolor sit amet.</p>
+    <p id="p2">This is paragraph two. Hello from the second page.</p>
+    <p id="p3">This is paragraph three. Hello from paragraph three</p>
+    <p id="p4">This is paragraph four. Keep practicing every day</p>
+    <p id="p5">This is paragraph five. You are doing great</p>
+
+    <br><br>
+
+    <input type="text" id="input" placeholder="Type something here">
+
+    <button id="btn">Click Me</button>
+
+    <p id="msg"></p>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            alert("Page loaded");
+
+            $("#p1").css({
+                "color": "red",
+                "background-color": "blue"
+            });
+           $("#p2" ).hide();
+           $("#p2").show();
+            $("#btn").click(function() {
+
+                alert("hello");
+
+                var a = $("#input").val();
+
+                $("#msg").html("<b>Your age is: </b>" + a);
+
+                alert(a);
+            });
+
+        });
+    </script>
+
+</body>
+</html>

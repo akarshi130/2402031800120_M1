@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            body{
+                margin:0;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height: 100vh;
+                background:rgb(14, 104, 14);
+
+            }
+
+            .box{
+                width: 150px;
+                height:160px;
+                background: black;
+
+                animation: rotateBox 2s linear infinite;
+            }
+
+            @keyframes rotateBox{
+                from{
+                    transfrom: rotate(0deg);
+
+                }
+
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>

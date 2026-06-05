@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var Car = new Array(3);
+
+Car[0] = "Ford";
+Car[1] = "Toyota";
+Car[2] = "Honda";
+
+var Car2 = new Array("Ford", "Toyota", "Honda");
+var Car3 = ["odi", "innova", "vagon"];
+
+document.write(Car2); // output : Ford,Toyota,Honda
+document.write("<br>");
+
+Car2.push("Yamaha");
+document.write(Car2); // output : Ford,Toyota,Honda,Yamaha
+document.write("<br>");
+
+Car2.pop();
+document.write(Car2); // output : Ford,Toyota,Honda
+document.write("<br>");
+
+var data = Car2.concat(Car3);
+document.write(data);             // output : Ford,Toyota,Honda,odi,innova,vagon
+document.write("<br>");
+
+var a = prompt ("enter Name" );
+alert( "User Entered "+ a);
+
+// function example
+function foo(p1)
+{
+    if(typeof(p1) == "number")
+        return 0;
+
+    else if(typeof(p1) == "string")
+        return "zero";
+}
+document.write(foo(1));
+document.write("<br>");
+document.write(foo("abc"));
+document.write("<br>");
+document.write(foo());
+
+</script>
+</body>
+</html>

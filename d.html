@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>First JavaScript</title>
+  </head>
+
+  <body>
+    <h1>Operations</h1>
+    <p id="demo1"></p>
+
+    <h1>Different Data Types</h1>
+    <p id="demo2"></p>
+
+    <h1>Types of Operator</h1>
+    <p id="demo3"></p>
+
+    <script>
+      
+      var x = 5;
+      var y = 6;
+
+      var z = x + y;
+      var z1 = x * y;
+      var z2 = x - y;
+      var z3 = x / y;
+
+
+      var a = 10;
+      var b = "Hello";
+      var c = true;
+      var d = 5.5;
+
+      
+      document.getElementById("demo1").innerHTML =
+        "Value of z is: " +
+        z +
+        "<br>" +
+        "Value of z1 is: " +
+        z1 +
+        "<br>" +
+        "Value of z2 is: " +
+        z2 +
+        "<br>" +
+        "Value of z3 is: " +
+        z3;
+
+      
+      document.getElementById("demo2").innerHTML =
+        "Datatype of a is: " +
+        typeof a +
+        "<br>" +
+        "Datatype of b is: " +
+        typeof b +
+        "<br>" +
+        "Datatype of c is: " +
+        typeof c +
+        "<br>" +
+        "Datatype of d is: " +
+        typeof d;
+
+      
+      var a = 10;
+      var b = 5;
+
+      
+      document.getElementById("demo3").innerHTML = "Arithmetic Operator (+): " +
+        (a + b) +
+        "<br>" +
+        "Arithmetic Operator (-): " +
+        (a - b) +
+        "<br>" +
+        "Arithmetic Operator (*): " +
+        a * b +
+        "<br>" +
+        "Arithmetic Operator (/): " +
+        a / b +
+        "<br><br>" +
+        "Comparison Operator (a > b): " +
+        (a > b) +
+        "<br>" +
+        "Comparison Operator (a < b): " +
+        (a < b) +
+        "<br><br>" +
+        "Logical Operator (a > 5 && b < 10): " + (a > 5 && b < 10);
+    </script>
+  </body>
+</html>

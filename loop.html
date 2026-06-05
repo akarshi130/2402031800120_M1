@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Programs</title>
+</head>
+<body>
+
+<script>
+
+// 1. Print numbers 1 to 10
+document.write("<h3>1 to 10 Numbers</h3>");
+for(let i=1; i<=10; i++){
+    document.write(i + " ");
+}
+
+// 2. Display Student Name
+let name = "Akarshi";
+document.write("<h3>Student Name</h3>");
+document.write(name);
+
+// 3. Calculate Total Marks
+let sub1 = 80;
+let sub2 = 75;
+let sub3 = 90;
+let total = sub1 + sub2 + sub3;
+
+document.write("<h3>Total Marks</h3>");
+document.write("Total = " + total);
+
+// 4. Multiplication Table
+let num = 5;
+document.write("<h3>Multiplication Table of 5</h3>");
+
+for(let i=1; i<=10; i++){
+    document.write(num + " x " + i + " = " + (num*i) + "<br>");
+}
+
+// 5. Even Numbers
+document.write("<h3>Even Numbers</h3>");
+
+for(let i=1; i<=10; i++){
+    if(i % 2 == 0){
+        document.write(i + " ");
+    }
+}
+
+// 6. Odd Numbers
+document.write("<h3>Odd Numbers</h3>");
+
+for(let i=1; i<=10; i++){
+    if(i % 2 != 0){
+        document.write(i + " ");
+    }
+}
+
+// 7. Countdown Timer
+document.write("<h3>Countdown Timer</h3>");
+
+for(let i=10; i>=1; i--){
+    document.write(i + " ");
+}
+
+// 8. ATM PIN Checking
+let pin = 1234;
+
+document.write("<h3>ATM PIN Checking</h3>");
+
+if(pin == 1234){
+    document.write("Correct PIN");
+}
+else{
+    document.write("Wrong PIN");
+}
+
+// 9. Password Validation
+let password = "admin123";
+
+document.write("<h3>Password Validation</h3>");
+
+if(password.length >= 8){
+    document.write("Valid Password");
+}
+else{
+    document.write("Invalid Password");
+}
+ 
+// 10. User Login Attempts
+let attempts = 3;
+
+document.write("<h3>User Login Attempts</h3>");
+
+while(attempts > 0){
+    document.write("Login Attempt Left: " + attempts + "<br>");
+    attempts--;
+}
+
+</script>
+
+</body>
+</html>
+        </script>
+    </body>
+</html>

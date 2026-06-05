@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flash Sale Queue System</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: darkgreen;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px;
+            margin: 5px;
+            background: #eee;
+            border-radius: 5px;
+        }
+
+        .stats {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        #status {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🔥 Flash Sale Queue System</h1>
+
+    <button id="buyBtn">Buy Now</button>
+
+    <div class="box">
+        <h2>System Status</h2>
+
+        <div class="stats">
+            Total Requests: <span id="total">0</span>
+        </div>
+
+        <div class="stats">
+            Processed: <span id="processed">0</span>
+        </div>
+
+        <div class="stats">
+            Waiting Queue: <span id="waiting">0</span>
+        </div>
+
+        <p id="status">System Ready</p>
+    </div>
+
+    <div class="box">
+        <h2>Queue</h2>
+        <ul id="queueList"></ul>
+    </div>
+
+<script>
+
+let queue = [];
+
+let totalRequests = 0;
+let processedRequests = 0;
+
+const LIMIT = 3;       // max requests
+const WINDOW = 5000;   // 5 seconds
+
+let requestCount = 0;
+
+setInterval(function() {
+    requestCount = 0;
+}, WINDOW);
+
+$("#buyBtn").click(function() {
+
+    totalRequests++;
+    $("#total").text(totalRequests);
+
+    let user = "User" + totalRequests;
+
+    if (requestCount < LIMIT) {
+
+        requestCount++;
+
+        processedRequests++;
+        $("#processed").text(processedRequests);
+
+        $("#status").text(user + " processed instantly");
+
+    } else {
+
+        queue.push(user);
+
+        $("#status").text(user + " added to queue");
+
+        updateQueue();
+    }
+
+    $("#waiting").text(queue.length);
+});
+
+function updateQueue() {
+
+    $("#queueList").empty();
+
+    queue.forEach(function(user, index) {
+        $("#queueList").append(
+            "<li>" + (index + 1) + ". " + user + "</li>"
+        );
+    });
+}
+
+setInterval(function() {
+
+    if (queue.length > 0) {
+
+        let user = queue.shift();
+
+        processedRequests++;
+
+        $("#processed").text(processedRequests);
+
+        $("#status").text("Processing " + user);
+
+        $("#waiting").text(queue.length);
+
+        updateQueue();
+    }
+
+}, 3000);
+
+</script>
+
+</body>
+</html>

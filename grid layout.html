@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Layout Example</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        .container{
+            display:grid;
+
+            grid-template-areas:
+                "header header"
+                "content sidebar"
+                "footer footer";
+
+            grid-template-columns: 1fr 220px;
+            grid-template-rows: 100px 1fr 80px;
+
+            gap:10px;
+            height:100vh;
+            padding:10px;
+            background:#f0f0f0;
+        }
+
+        .box{
+            background:grey;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:25px;
+            border-radius:10px;
+        }
+
+        .header{
+            grid-area:header;
+        }
+
+        .content{
+            grid-area:content;
+        }
+
+        .footer{
+            grid-area:footer;
+        }
+
+        .sidebar{
+            grid-area:sidebar;
+
+            display:grid;
+            grid-template-rows: repeat(3, 1fr);
+            gap:10px;
+        }
+
+        .small-box{
+            background:darkgrey;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:22px;
+            border-radius:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box header">
+            Header
+        </div>
+
+        <div class="box content">
+            Content Box
+        </div>
+
+        <div class="sidebar">
+
+            <div class="small-box">
+                HTML
+            </div>
+
+            <div class="small-box">
+                CSS
+            </div>
+
+            <div class="small-box">
+                JS
+            </div>
+
+        </div>
+
+        <div class="box footer">
+            Footer
+        </div>
+
+    </div>
+
+    <script>
+        console.log("Grid Layout Loaded");
+    </script>
+
+</body>
+</html>
